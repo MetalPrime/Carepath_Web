@@ -10,5 +10,14 @@ body{
     background-color: $main-background-color;
 }
 
+.welcome{
+    margin: 50px auto;
+    font-family: $principal-font;
+    font-size: 24px;
+    text-align: center;
+}
+
+
+
 @import '_title.scss';
 @import '_categories.scss';

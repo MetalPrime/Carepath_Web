@@ -1,0 +1,35 @@
+.listCategories{
+    display: flex;
+    justify-content: space-around;
+}
+
+.categories{
+    width: 25%;
+    display: flex;
+    padding: 30px 20px;
+    background-color: $main-color;
+    border-radius: 10px;
+    text-decoration: none;
+
+    &__info{
+        width: auto;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-family: $principal-font;
+        color: $secundary-color;
+        margin-left: 10px;
+        text-align: center;
+    }
+
+    &__title{
+        font-size: 20px;
+        font-weight: 800;
+        margin-bottom: 10px;
+    }
+
+    &__description{
+        font-weight: 600;
+    }
+}
