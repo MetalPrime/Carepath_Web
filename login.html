@@ -15,13 +15,34 @@
         <h2 class="form__title">Inicia Sesión</h2>
         <label class="form__label">
             Usuario
-            <input type="text" name="user" class="form__input" placeholder="Usuario">
+            <input id="correo" type="text" name="correo" class="form__input" placeholder="Correo">
         </label>
         <label class="form__label">
             Contraseña
-            <input type="password" name="password" class="form__input" placeholder="Contraseña">
+            <input id="password" type="password" name="password" class="form__input" placeholder="Contraseña">
         </label>
         <button class="button">Iniciar Sesión</button>
     </form>
 </body>
 </html>
+
+<script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-analytics.js"></script>
+
+<script>
+  var firebaseConfig = {
+    apiKey: "AIzaSyCDLsGJOke2qA1e3qbyC8jxxpvizUBsw-A",
+    authDomain: "carepath-805ff.firebaseapp.com",
+    databaseURL: "https://carepath-805ff-default-rtdb.firebaseio.com",
+    projectId: "carepath-805ff",
+    storageBucket: "carepath-805ff.appspot.com",
+    messagingSenderId: "117197958415",
+    appId: "1:117197958415:web:ea31d3834da0fea2d3227a",
+    measurementId: "G-ZJNNY0C81G"
+  };
+
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+
+<script src="script/login.js"></script>
