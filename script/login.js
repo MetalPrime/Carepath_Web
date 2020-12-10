@@ -35,7 +35,7 @@ logearCuenta = () => {
     );
 
 }
-logear.addEventListener('click', logearCuenta);
+logear.addEventListener('click', logearCuenta());
 
 ingresoReg = () => {
 
