@@ -18,9 +18,30 @@ logearCuenta = () => {
 
     auth.signInWithEmailAndPassword(correo.value, contraseña.value).then(
 
-        (data) => {
+        (validacion) => {
 
-            window.location.href = 'index.html';
+            var id = validacion.user.uid;
+
+            database.ref('administrador/' + id).once(
+
+                'value',
+
+                (data) => {
+
+                    let adminData = data.val();
+
+                    if (adminData.estado !== 'administrador') {
+
+                        auth.signOut();
+                        alert('error de usuario ¿Esta seguro que cuentas con una cuenta de administrador?');
+
+                    } else {
+
+                        window.location.href = 'index.html';
+
+                    }
+                }
+            );
 
         }
 
@@ -37,9 +58,3 @@ logearCuenta = () => {
 }
 logear.addEventListener('click', logearCuenta());
 
-ingresoReg = () => {
-
-    window.location.href = 'registro.html';
-
-}
-cambioReg.addEventListener('click', ingresoReg);
