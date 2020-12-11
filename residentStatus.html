@@ -11,7 +11,7 @@
         <h1 class="title__text">Carepath</h1>
     </article>
     <article style="position: relative;">
-        <a href="index.html" class="return"><img src="data/img/return.svg" alt="return" ></a>
+        <a href="ensemble.html" class="return"><img src="data/img/return.svg" alt="return" ></a>
         <h2 class="subtitle">Estado residente</h2>
         <button class="button btnSchedule">Ver agenda</button>
         <button class="button btnNotification">Crear notificación</button>
@@ -19,12 +19,11 @@
             <section class="info__section">
                 <h3 class="info__subtitle">Información residente</h3>
                 <div class="info__resident">
-                    <p>Nombre</p>
-                    <p>Apellido</p>
-                    <p>Teléfono</p>
-                    <p>Correo</p>
-                    <p>Documento</p>
-                    <p>Número de documento</p>
+                    <p class="info__resident--name"></p>
+                    <p class="info__resident--phone">Teléfono</p>
+                    <p class="info__resident--email">Correo</p>
+                    <p class="info__resident--document">Documento</p>
+                    <p class="info__resident--numberDocument">Número de documento</p>
                 </div>
             </section>
             <section class="info__section">
@@ -38,8 +37,8 @@
                         
                     </div>
                     <div>
-                        <p>Numero de torre</p>
-                        <p>Numero apartamento</p>
+                        <p class="info__other--torre">Número de torre</p>
+                        <p class="info__other--departamento">Número apartamento</p>
                     </div>
                     <div>
                         Miembros familia
@@ -55,3 +54,4 @@
 <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-analytics.js"></script>
 
 <script src="script/firebase.js"></script>
+<script src="script/residentStatus.js"></script>
