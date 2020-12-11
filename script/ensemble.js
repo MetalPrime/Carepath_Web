@@ -4,7 +4,7 @@ renderInquilinos = (list) =>{
     list__content.innerHTML = "";
 
     list.forEach(element => {
-        const newList = document.createElement('div');
+        const newList = document.createElement('a');
         newList.classList.add('list__element');
 
         const url = `residentStatus.html?${element.id}-${element.nombre}`;
@@ -14,7 +14,7 @@ renderInquilinos = (list) =>{
         <p>${element.torre +" " + element.departamento}</p>
         <p>${element.nombre}</p>
         <p>0%</p>
-        <p>imgCambiarPlox</p>  
+        <img src="data/img/notification.svg" alt="notification">  
         `;
 
         list__content.appendChild(newList);
