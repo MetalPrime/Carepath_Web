@@ -6,7 +6,7 @@ firebase.auth().onAuthStateChanged((user) => {
       // https://firebase.google.com/docs/reference/js/firebase.User
       var uid = user.uid;
       // ...
-      db.ref('administradores&/'+uid).on('value', element =>{
+      db.ref('administradores/'+uid).on('value', element =>{
           const value = element.val();
 
           welcome__user.innerHTML = value.nombre;

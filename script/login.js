@@ -3,8 +3,6 @@ const contraseña = document.getElementById('password');
 
 const logear = document.querySelector('.btnIniciar');
 
-const database = firebase.database();
-
 
 logear.addEventListener('click', function(event){
     event.preventDefault();
@@ -15,20 +13,23 @@ logear.addEventListener('click', function(event){
 
     }
 
-    auth.signInWithEmailAndPassword(correo.value, contraseña.value).then(
+    console.log(correo.value)
+    console.log(contraseña.value)
+
+    firebase.auth().signInWithEmailAndPassword(correo.value.trim(), contraseña.value.trim()).then(
 
         (validacion) => {
 
             var id = validacion.user.uid;
 
-            database.ref('administrador/' + id).once(
+            db.ref('administradores/' + id).on(
 
                 'value',
 
                 (data) => {
 
                     let adminData = data.val();
-
+                    console.log(adminData);
                     if (adminData.estado !== 'administrador') {
 
                         auth.signOut();
@@ -49,7 +50,7 @@ logear.addEventListener('click', function(event){
         (error) => {
 
             alert('datos de cuenta incorrectos');
-
+            alert(error);
         }
 
     );
