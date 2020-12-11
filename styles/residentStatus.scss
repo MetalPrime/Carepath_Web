@@ -55,7 +55,10 @@ body{
         flex-wrap: wrap;
         justify-content: space-around;
         p{
-            width: 25%;
+            width: 22%;
+            padding: 3%;
+            padding-left: 6%;
+            padding-right: 6%;
         }
         
     }
@@ -64,5 +67,7 @@ body{
         width: 100%;
         display: flex;
         justify-content: space-around;
+        align-items: center;
+        height: 28vh;
     }
 }
