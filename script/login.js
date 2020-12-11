@@ -1,14 +1,13 @@
 const correo = document.getElementById('correo');
 const contraseña = document.getElementById('password');
 
-const logear = document.getElementsByClassName('button');
+const logear = document.querySelector('.btnIniciar');
 
 const database = firebase.database();
-const auth = firebase.auth();
 
 
-logearCuenta = () => {
-
+logear.addEventListener('click', function(event){
+    event.preventDefault();
     if (correo.value == '' || contraseña.value == '') {
 
         alert('completa toda la informacion requerida');
@@ -54,7 +53,5 @@ logearCuenta = () => {
         }
 
     );
-
-}
-logear.addEventListener('click', logearCuenta());
+});
 
